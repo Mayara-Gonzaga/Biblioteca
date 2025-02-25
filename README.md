@@ -49,7 +49,7 @@ cd Biblioteca
 
 ### **2️⃣ Acesse a pasta do backend**  
 ```bash
-cd backend
+cd library-backend
 ```
 
 ### **3️⃣ Instale as dependências**  
