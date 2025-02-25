@@ -1,5 +1,4 @@
 # 📚 **Biblioteca**  
-
 Este é um projeto **full stack** de uma **Biblioteca**, desenvolvido com **Laravel** (backend) e **React + Vite** (frontend).  
 
 O sistema permite:  
@@ -48,13 +47,18 @@ git clone https://github.com/Mayara-Gonzaga/Biblioteca.git
 cd Biblioteca
 ```
 
-### **2️⃣ Instale as dependências**  
+### **2️⃣ Acesse a pasta do backend**  
+```bash
+cd backend
+```
+
+### **3️⃣ Instale as dependências**  
 ```bash
 composer install
 npm install
 ```
 
-### **3️⃣ Configure as variáveis de ambiente**  
+### **4️⃣ Configure as variáveis de ambiente**  
 ```bash
 cp .env.example .env
 ```
@@ -68,18 +72,18 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### **4️⃣ Crie a base de dados e execute as migrations**  
+### **5️⃣ Crie a base de dados e execute as migrations**  
 ```bash
 php artisan migrate --seed
 ```
 (O `--seed` preenche a base de dados com registros iniciais, se houver.)  
 
-### **5️⃣ Gere a chave da aplicação**  
+### **6️⃣ Gere a chave da aplicação**  
 ```bash
 php artisan key:generate
 ```
 
-### **6️⃣ Inicie o servidor Laravel**  
+### **7️⃣ Inicie o servidor Laravel**  
 ```bash
 php artisan serve
 ```
@@ -91,7 +95,7 @@ O backend estará disponível em **http://127.0.0.1:8000**.
 
 ### **1️⃣ Acesse a pasta do frontend**  
 ```bash
-cd library-frontend
+cd ../library-frontend
 ```
 
 ### **2️⃣ Instale as dependências**  
