@@ -1,70 +1,99 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Biblioteca 📚
 
-## Available Scripts
+Este é um projeto full stack de uma Biblioteca desenvolvido com Laravel (backend) e React (frontend). O sistema permite cadastrar, listar, editar, visualizar e deletar livros, além de possuir campo de busca por título e paginação com 10 livros por página.
 
-In the project directory, you can run:
+🚀 Tecnologias
+	•	Backend: Laravel (PHP)
+	•	Banco de Dados: MySQL
+	•	Frontend: React + Vite
+	•	Gerenciador de Pacotes: Composer & npm
 
-### `npm start`
+⚙ Pré-requisitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Antes de começar, certifique-se de ter instalado em seu sistema:
+	•	PHP >= 8.1
+	•	Composer
+	•	MySQL
+	•	Node.js >= 16
+	•	XAMPP ou outro servidor local (caso necessário)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🔧 Configuração do Backend (Laravel)
+	1.	Clone o repositório
 
-### `npm test`
+git clone https://github.com/Mayara-Gonzaga/Biblioteca.git
+cd Biblioteca
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+	2.	Instale as dependências do Laravel
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+composer install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+	3.	Crie o arquivo de ambiente
 
-### `npm run eject`
+cp .env.example .env
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+	4.	Configure o banco de dados
+No arquivo .env, edite as credenciais do MySQL:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=library
+DB_USERNAME=root
+DB_PASSWORD=
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+	5.	Crie a base de dados e execute as migrations
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+php artisan migrate --seed
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+	6.	Gere a chave da aplicação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+php artisan key:generate
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+	7.	Inicie o servidor Laravel
 
-### Making a Progressive Web App
+php artisan serve
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+O backend estará disponível em http://127.0.0.1:8000.
 
-### Advanced Configuration
+🎨 Configuração do Frontend (React)
+	1.	Acesse a pasta do frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+cd library-frontend
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+	2.	Instale as dependências
 
-### `npm run build` fails to minify
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+	3.	Crie um arquivo .env na pasta library-frontend e adicione:
+
+VITE_API_URL=http://127.0.0.1:8000/api
+
+
+	4.	Inicie o frontend
+
+npm start
+
+O frontend estará disponível em http://localhost:3000.
+
+📌 Funcionalidades
+
+✅ Cadastro, listagem, edição, visualização e remoção de livros (CRUD)
+✅ Campo de busca por título na listagem
+✅ Paginação com 10 livros por página
+✅ Interface responsiva
+✅ Backend estruturado com boas práticas
+
+
+📝 Licença
+
+Este projeto está sob a licença MIT. Sinta-se à vontade para utilizá-lo e melhorá-lo!
+
