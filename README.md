@@ -21,16 +21,15 @@ Antes de começar, certifique-se de ter instalado em seu sistema:
 🔧 Configuração do Backend (Laravel)
 	1.	Clone o repositório
 
-git clone https://github.com/Mayara-Gonzaga/Biblioteca.git
+
+	git clone https://github.com/Mayara-Gonzaga/Biblioteca.gi
+ 
 cd Biblioteca
-
-
-	2.	Instale as dependências do Laravel
 
 composer install
 
 
-	3.	Crie o arquivo de ambiente
+	3.	npm install 
 
 cp .env.example .env
 
